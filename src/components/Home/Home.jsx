@@ -1,53 +1,25 @@
-import React, { useState } from 'react';
+// Home.jsx
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
-  const [searchType, setSearchType] = useState('hotel'); // Default to hotel search
-
-  const handleSearchTypeChange = (event) => {
-    setSearchType(event.target.value);
-  };
-
-  const handleSearchSubmit = () => {
-    // Handle the search logic here, e.g., make API requests and display results
-    console.log(`Performing ${searchType} search`);
-  };
-
   return (
-    <div className="container">
-      <h1>Hotel & Flight Booking</h1>
+    <div className="container mx-auto my-8 p-8 bg-gray-100 flex justify-around">
+      <Link to="/hotel">
+        <div className="bg-white p-8 rounded-md shadow-md flex-1 cursor-pointer">
+          <h2 className="text-2xl font-semibold mb-4">Hotel Booking</h2>
+          <p className="text-gray-700">Book your stay with us!</p>
+        </div>
+      </Link>
 
-      <form className="search-form">
-        <label>
-          Search for:
-          <select value={searchType} onChange={handleSearchTypeChange}>
-            <option value="hotel">Hotel</option>
-            <option value="flight">Flight</option>
-          </select>
-        </label>
-
-        {/* Render input fields based on searchType */}
-        {searchType === 'hotel' ? (
-          <>
-            <label>Check-In Date: <input type="date" /></label>
-            <label>Check-Out Date: <input type="date" /></label>
-            <label>City: <input type="text" /></label>
-            <label>Number of Rooms: <input type="number" /></label>
-            <label>Number of Adults: <input type="number" /></label>
-            <label>Number of Children: <input type="number" /></label>
-          </>
-        ) : (
-          <>
-            <label>Departure City: <input type="text" /></label>
-            <label>Arrival City: <input type="text" /></label>
-            <label>Departure Date: <input type="date" /></label>
-            <label>Return Date: <input type="date" /></label>
-            <label>Number of Adults: <input type="number" /></label>
-            <label>Number of Children: <input type="number" /></label>
-          </>
-        )}
-
-        <button type="button" onClick={handleSearchSubmit}>Search</button>
-      </form>
+      <Link to="/flight">
+        <div className="bg-white p-8 rounded-md shadow-md flex-1 cursor-pointer">
+          <h2 className="text-2xl font-semibold mb-4">Flight Booking</h2>
+          <p className="text-gray-700">Fly high with great deals!</p>
+        </div>
+      </Link>
     </div>
   );
 };

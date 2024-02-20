@@ -6,16 +6,29 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home';
+import Flight from './components/Flight/Flight';
+import Hotel from './components/Hotel/Hotel';
+import Main from './layout/Main';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Main></Main>,
     children: [
       {
         path: '/',
         element: <Home></Home>
       },
+      {
+        path: '/flight',
+        element: <Flight></Flight>
+      },
+      {
+        path: '/hotel',
+        element: <Hotel></Hotel>
+      },
+      
     ]
   },
 ]);
