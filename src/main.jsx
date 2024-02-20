@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Flight from './components/Flight/Flight';
 import Hotel from './components/Hotel/Hotel';
 import Main from './layout/Main';
+import HotelCard from './components/ShowResult/HotelCard/HotelCard';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/hotel',
         element: <Hotel></Hotel>
+      },
+      {
+        path: '/show-hotel-card',
+        element: <HotelCard></HotelCard>
       },
       
     ]
