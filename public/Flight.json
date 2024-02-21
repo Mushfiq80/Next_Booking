@@ -1,5 +1,5 @@
-{
-    "flights": [
+[
+     
       {
         "date": "2024-02-21",
         "flightsInfo": [
@@ -27,15 +27,7 @@
           {"airline": "JetStream", "departureTime": "20:15", "arrivalTime": "22:45", "ticketPrice": 165.50}
         ]
       },
-        {
-            "date": "2024-02-24",
-            "flightsInfo": [
-            {"airline": "FlightA", "departureTime": "08:00", "arrivalTime": "10:30", "ticketPrice": 150.00},
-            {"airline": "FlightB", "departureTime": "12:00", "arrivalTime": "14:30", "ticketPrice": 180.50},
-            {"airline": "FlightC", "departureTime": "16:00", "arrivalTime": "18:30", "ticketPrice": 200.00},
-            {"airline": "FlightD", "departureTime": "20:00", "arrivalTime": "22:30", "ticketPrice": 170.75}
-            ]
-        },
+        
         {
             "date": "2024-02-25",
             "flightsInfo": [
@@ -137,5 +129,5 @@
             }
 
     ]
-  }
+
   
