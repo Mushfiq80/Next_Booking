@@ -1,0 +1,141 @@
+{
+    "flights": [
+      {
+        "date": "2024-02-21",
+        "flightsInfo": [
+          {"airline": "FlightA", "departureTime": "08:00", "arrivalTime": "10:30", "ticketPrice": 150.00},
+          {"airline": "FlightB", "departureTime": "12:00", "arrivalTime": "14:30", "ticketPrice": 180.50},
+          {"airline": "FlightC", "departureTime": "16:00", "arrivalTime": "18:30", "ticketPrice": 200.00},
+          {"airline": "FlightD", "departureTime": "20:00", "arrivalTime": "22:30", "ticketPrice": 170.75}
+        ]
+      },
+      {
+        "date": "2024-02-22",
+        "flightsInfo": [
+          {"airline": "SkyJet", "departureTime": "09:30", "arrivalTime": "11:45", "ticketPrice": 160.25},
+          {"airline": "AirExpress", "departureTime": "13:15", "arrivalTime": "15:45", "ticketPrice": 190.00},
+          {"airline": "StarWings", "departureTime": "17:30", "arrivalTime": "20:00", "ticketPrice": 210.50},
+          {"airline": "Sunrise Airlines", "departureTime": "21:00", "arrivalTime": "23:30", "ticketPrice": 180.25}
+        ]
+      },
+      {
+        "date": "2024-02-23",
+        "flightsInfo": [
+          {"airline": "AirLink", "departureTime": "08:45", "arrivalTime": "11:00", "ticketPrice": 155.50},
+          {"airline": "BlueSky", "departureTime": "12:30", "arrivalTime": "15:15", "ticketPrice": 185.75},
+          {"airline": "SwiftAir", "departureTime": "16:45", "arrivalTime": "19:30", "ticketPrice": 195.00},
+          {"airline": "JetStream", "departureTime": "20:15", "arrivalTime": "22:45", "ticketPrice": 165.50}
+        ]
+      },
+        {
+            "date": "2024-02-24",
+            "flightsInfo": [
+            {"airline": "FlightA", "departureTime": "08:00", "arrivalTime": "10:30", "ticketPrice": 150.00},
+            {"airline": "FlightB", "departureTime": "12:00", "arrivalTime": "14:30", "ticketPrice": 180.50},
+            {"airline": "FlightC", "departureTime": "16:00", "arrivalTime": "18:30", "ticketPrice": 200.00},
+            {"airline": "FlightD", "departureTime": "20:00", "arrivalTime": "22:30", "ticketPrice": 170.75}
+            ]
+        },
+        {
+            "date": "2024-02-25",
+            "flightsInfo": [
+            {"airline": "SkyJet", "departureTime": "09:30", "arrivalTime": "11:45", "ticketPrice": 160.25},
+            {"airline": "AirExpress", "departureTime": "13:15", "arrivalTime": "15:45", "ticketPrice": 190.00},
+            {"airline": "StarWings", "departureTime": "17:30", "arrivalTime": "20:00", "ticketPrice": 210.50},
+            {"airline": "Sunrise Airlines", "departureTime": "21:00", "arrivalTime": "23:30", "ticketPrice": 180.25}
+            ]
+        },
+        {
+            "date": "2024-02-26",
+            "flightsInfo": [
+            {"airline": "AirLink", "departureTime": "08:45", "arrivalTime": "11:00", "ticketPrice": 155.50},
+            {"airline": "BlueSky", "departureTime": "12:30", "arrivalTime": "15:15", "ticketPrice": 185.75},
+            {"airline": "SwiftAir", "departureTime": "16:45", "arrivalTime": "19:30", "ticketPrice": 195.00},
+            {"airline": "JetStream", "departureTime": "20:15", "arrivalTime": "22:45", "ticketPrice": 165.50}
+            ]
+        },
+        {
+            "date": "2024-02-24",
+            "flightsInfo": [
+              {"airline": "SkyJet", "departureTime": "09:30", "arrivalTime": "11:45", "ticketPrice": 160.25},
+              {"airline": "AirExpress", "departureTime": "13:15", "arrivalTime": "15:45", "ticketPrice": 190.00},
+              {"airline": "StarWings", "departureTime": "17:30", "arrivalTime": "20:00", "ticketPrice": 210.50},
+              {"airline": "Sunrise Airlines", "departureTime": "21:00", "arrivalTime": "23:30", "ticketPrice": 180.25}
+            ]
+          },
+          {
+            "date": "2024-02-25",
+            "flightsInfo": [
+              {"airline": "AirLink", "departureTime": "08:45", "arrivalTime": "11:00", "ticketPrice": 155.50},
+              {"airline": "BlueSky", "departureTime": "12:30", "arrivalTime": "15:15", "ticketPrice": 185.75},
+              {"airline": "SwiftAir", "departureTime": "16:45", "arrivalTime": "19:30", "ticketPrice": 195.00},
+              {"airline": "JetStream", "departureTime": "20:15", "arrivalTime": "22:45", "ticketPrice": 165.50}
+            ]
+          },
+          {
+            "date": "2024-02-26",
+            "flightsInfo": [
+              {"airline": "AirWays", "departureTime": "10:00", "arrivalTime": "12:15", "ticketPrice": 175.25},
+              {"airline": "FlyHigh", "departureTime": "14:45", "arrivalTime": "17:15", "ticketPrice": 200.50},
+              {"airline": "JetStar", "departureTime": "18:30", "arrivalTime": "21:00", "ticketPrice": 220.00},
+              {"airline": "SkyTravel", "departureTime": "22:00", "arrivalTime": "00:30", "ticketPrice": 190.75}
+            ]
+          },
+          {
+            "date": "2024-02-27",
+            "flightsInfo": [
+              {"airline": "CloudJet", "departureTime": "09:15", "arrivalTime": "11:30", "ticketPrice": 165.00},
+              {"airline": "WindWings", "departureTime": "13:00", "arrivalTime": "15:45", "ticketPrice": 195.25},
+              {"airline": "AeroFly", "departureTime": "17:45", "arrivalTime": "20:15", "ticketPrice": 205.50},
+              {"airline": "SkyRide", "departureTime": "21:30", "arrivalTime": "23:45", "ticketPrice": 175.00}
+            ]
+          },
+          {
+            "date": "2024-02-28",
+            "flightsInfo": [
+              {"airline": "SwiftWings", "departureTime": "08:30", "arrivalTime": "10:45", "ticketPrice": 160.50},
+              {"airline": "StarFly", "departureTime": "12:15", "arrivalTime": "15:00", "ticketPrice": 190.75},
+              {"airline": "EagleAir", "departureTime": "16:30", "arrivalTime": "19:00", "ticketPrice": 200.00},
+              {"airline": "SkyHawk", "departureTime": "20:45", "arrivalTime": "23:15", "ticketPrice": 170.25}
+            ]
+          },
+          {
+            "date": "2024-02-29",
+            "flightsInfo": [
+              {"airline": "JetSwift", "departureTime": "09:00", "arrivalTime": "11:15", "ticketPrice": 155.25},
+              {"airline": "BlueWing", "departureTime": "13:30", "arrivalTime": "16:15", "ticketPrice": 185.50},
+              {"airline": "CloudRider", "departureTime": "17:45", "arrivalTime": "20:30", "ticketPrice": 195.75},
+              {"airline": "SkyBlaze", "departureTime": "21:15", "arrivalTime": "23:30", "ticketPrice": 165.00}
+            ]
+          },
+            {
+                "date": "2024-03-01",
+                "flightsInfo": [
+                {"airline": "AirLink", "departureTime": "08:45", "arrivalTime": "11:00", "ticketPrice": 155.50},
+                {"airline": "BlueSky", "departureTime": "12:30", "arrivalTime": "15:15", "ticketPrice": 185.75},
+                {"airline": "SwiftAir", "departureTime": "16:45", "arrivalTime": "19:30", "ticketPrice": 195.00},
+                {"airline": "JetStream", "departureTime": "20:15", "arrivalTime": "22:45", "ticketPrice": 165.50}
+                ]
+            },
+            {
+                "date": "2024-03-02",
+                "flightsInfo": [
+                {"airline": "AirWays", "departureTime": "10:00", "arrivalTime": "12:15", "ticketPrice": 175.25},
+                {"airline": "FlyHigh", "departureTime": "14:45", "arrivalTime": "17:15", "ticketPrice": 200.50},
+                {"airline": "JetStar", "departureTime": "18:30", "arrivalTime": "21:00", "ticketPrice": 220.00},
+                {"airline": "SkyTravel", "departureTime": "22:00", "arrivalTime": "00:30", "ticketPrice": 190.75}
+                ]
+            },
+            {
+                "date": "2024-03-03",
+                "flightsInfo": [
+                {"airline": "CloudJet", "departureTime": "09:15", "arrivalTime": "11:30", "ticketPrice": 165.00},
+                {"airline": "WindWings", "departureTime": "13:00", "arrivalTime": "15:45", "ticketPrice": 195.25},
+                {"airline": "AeroFly", "departureTime": "17:45", "arrivalTime": "20:15", "ticketPrice": 205.50},
+                {"airline": "SkyRide", "departureTime": "21:30", "arrivalTime": "23:45", "ticketPrice": 175.00}
+                ]
+            }
+
+    ]
+  }
+  

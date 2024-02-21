@@ -1,5 +1,3 @@
-// HotelCard.jsx
-
 import React from 'react';
 
 const HotelCard = ({ hotelSearchParams }) => {
