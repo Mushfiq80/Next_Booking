@@ -25,7 +25,7 @@ const Hotel = () => {
     });
 
     const [hotelData, setHotelData] = useState(null);
-    const [uniqueLocations, setUniqueLocations] = useState([]);
+    const [matchLocations, setMatchLocations] = useState([]);
     const [searchHotel, setSearchHotel] = useState([]); // New state for filtered hotels
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const Hotel = () => {
 
                 // Extract unique locations from the hotel data
                 const locations = Array.from(new Set(data.map((hotel) => hotel.location)));
-                setUniqueLocations(locations);
+                setMatchLocations(locations);
             } catch (error) {
                 console.error('Error fetching hotel data:', error);
             }
@@ -113,7 +113,7 @@ const Hotel = () => {
                             className="block w-full p-2 border rounded-md"
                         >
                             <option value="">Select city</option>
-                            {uniqueLocations.map((location, index) => (
+                            {matchLocations.map((location, index) => (
                                 <option key={index} value={location}>
                                     {location}
                                 </option>
