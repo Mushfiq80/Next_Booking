@@ -1,5 +1,3 @@
-// FlightCard.jsx
-
 import React, { useState, useEffect } from 'react';
 
 const FlightCard = ({ flightSearchParams }) => {

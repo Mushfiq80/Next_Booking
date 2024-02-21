@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+// Hotel.jsx
+
+import React, { useEffect, useState } from 'react';
 import HotelCard from '../ShowResult/HotelCard/HotelCard';
+import HotelView from '../HotelView/HotelView';
 
 
 const Hotel = () => {
@@ -20,6 +23,40 @@ const Hotel = () => {
         numberOfAdults: '',
         numberOfChildren: '',
     });
+
+    const [hotelData, setHotelData] = useState(null);
+    const [uniqueLocations, setUniqueLocations] = useState([]);
+    const [searchHotel, setSearchHotel] = useState([]); // New state for filtered hotels
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('../../../../public/Hotel.json');
+                const data = await response.json();
+                setHotelData(data);
+
+                // Extract unique locations from the hotel data
+                const locations = Array.from(new Set(data.map((hotel) => hotel.location)));
+                setUniqueLocations(locations);
+            } catch (error) {
+                console.error('Error fetching hotel data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        // Filter hotels based on the input city
+        if (formData.city) {
+            const filteredHotels = hotelData.filter((hotel) =>
+                hotel.location.toLowerCase().includes(formData.city.toLowerCase())
+            );
+            setSearchHotel(filteredHotels);
+        } else {
+            setSearchHotel([]);
+        }
+    }, [formData.city, hotelData]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -69,14 +106,19 @@ const Hotel = () => {
 
                     <label className="mb-2">
                         City:
-                        <input
-                            type="text"
+                        <select
                             name="city"
                             value={formData.city}
                             onChange={handleInputChange}
                             className="block w-full p-2 border rounded-md"
-                            placeholder="Enter city"
-                        />
+                        >
+                            <option value="">Select city</option>
+                            {uniqueLocations.map((location, index) => (
+                                <option key={index} value={location}>
+                                    {location}
+                                </option>
+                            ))}
+                        </select>
                     </label>
 
                     <label className="mb-2">
@@ -123,12 +165,15 @@ const Hotel = () => {
                         Search
                     </button>
                 </form>
-
-                {/* Pass hotelSearchParams to HotelCard component */}
-
             </div>
             <div>
-                <HotelCard hotelSearchParams={hotelSearchParams} />
+                <HotelCard hotelSearchParams={hotelSearchParams} hotelData={hotelData} />
+            </div>
+            <div>
+                {/* Pass the filtered hotels to HotelView component */}
+                {searchHotel.map((hotel) => (
+                    <HotelView key={hotel._id} hotel={hotel} />
+                ))}
             </div>
         </div>
     );

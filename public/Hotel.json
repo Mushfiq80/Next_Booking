@@ -1,0 +1,138 @@
+[
+    {
+      "_id": "hotel001",
+      "hotel_pic": "../src/assets/1.jpg",
+      "h_name": "Luxury Palace Hotel",
+      "rating": 4.5,
+      "location": "City Center",
+      "price": 250.00,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel002",
+      "hotel_pic": "../src/assets/2.jpg",
+      "h_name": "Sunset Resort",
+      "rating": 4.0,
+      "location": "Beachfront",
+      "price": 180.50,
+      "size_for": 3
+    },
+    {
+      "_id": "hotel003",
+      "hotel_pic": "../src/assets/3.jpg",
+      "h_name": "Mountain View Lodge",
+      "rating": 3.8,
+      "location": "Mountain Range",
+      "price": 120.00,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel004",
+      "hotel_pic": "../src/assets/4.jpg",
+      "h_name": "Urban Retreat Suites",
+      "rating": 4.2,
+      "location": "Downtown",
+      "price": 200.75,
+      "size_for": 4
+    },
+    {
+      "_id": "hotel005",
+      "hotel_pic": "../src/assets/5.jpg",
+      "h_name": "Green Oasis Hotel",
+      "rating": 4.7,
+      "location": "Countryside",
+      "price": 300.50,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel006",
+      "hotel_pic": "../src/assets/6.jpg",
+      "h_name": "Historic Heritage Inn",
+      "rating": 3.5,
+      "location": "Old Town",
+      "price": 150.00,
+      "size_for": 3
+    },   
+    {
+      "_id": "hotel007",
+      "hotel_pic": "../src/assets/7.jpg",
+      "h_name": "Serenity Plaza",
+      "rating": 4.4,
+      "location": "Park View",
+      "price": 220.25,
+      "size_for": 4
+    },
+    {
+      "_id": "hotel008",
+      "hotel_pic": "../src/assets/8.jpg",
+      "h_name": "Riverside Retreat",
+      "rating": 4.6,
+      "location": "Riverfront",
+      "price": 180.00,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel009",
+      "hotel_pic": "../src/assets/9.jpg",
+      "h_name": "Skyline Suites",
+      "rating": 3.9,
+      "location": "High-rise District",
+      "price": 250.50,
+      "size_for": 3
+    },
+    {
+      "_id": "hotel010",
+      "hotel_pic": "../src/assets/10.jpg",
+      "h_name": "Tranquil Gardens Resort",
+      "rating": 4.8,
+      "location": "Nature Reserve",
+      "price": 280.75,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel011",
+      "hotel_pic": "../src/assets/11.jpg",
+      "h_name": "Cozy Corner Motel",
+      "rating": 3.2,
+      "location": "Suburbia",
+      "price": 100.00,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel012",
+      "hotel_pic": "../src/assets/12.jpg",
+      "h_name": "Harbor View Hotel",
+      "rating": 4.1,
+      "location": "Harborfront",
+      "price": 210.00,
+      "size_for": 4
+    },
+    {
+      "_id": "hotel013",
+      "hotel_pic": "../src/assets/13.jpg",
+      "h_name": "Golden Gate Suites",
+      "rating": 4.3,
+      "location": "Cityscape",
+      "price": 190.25,
+      "size_for": 3
+    },
+    {
+      "_id": "hotel014",
+      "hotel_pic": "../src/assets/14.jpg",
+      "h_name": "Majestic Manor",
+      "rating": 4.9,
+      "location": "Hilltop",
+      "price": 320.00,
+      "size_for": 2
+    },
+    {
+      "_id": "hotel015",
+      "hotel_pic": "../src/assets/15.jpg",
+      "h_name": "Modern Marvel Hotel",
+      "rating": 4.6,
+      "location": "Tech Hub",
+      "price": 280.50,
+      "size_for": 3
+    }
+]
+  
