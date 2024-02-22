@@ -27,6 +27,15 @@
       "size_for": 2
     },
     {
+      "_id": "hotel016",
+      "hotel_pic": "../src/assets/6.jpg",
+      "h_name": "Mountain Palace",
+      "rating": 4.8,
+      "location": "Mountain Range",
+      "price": 120.00,
+      "size_for": 2
+    },
+    {
       "_id": "hotel004",
       "hotel_pic": "../src/assets/4.jpg",
       "h_name": "Urban Retreat Suites",

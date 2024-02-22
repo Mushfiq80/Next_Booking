@@ -45,36 +45,37 @@ const HotelCard = ({ hotelSearchParams }) => {
 
   return (
     <div className="mt-8">
-      <h2 className="text-xl font-semibold mb-2">Hotel Search Parameters:</h2>
-      <ul>
+      <h2 className="text-3xl text-center font-semibold mb-2">Hotel Search Parameters</h2>
+      <ul className='flex justify-center space-x-4'>
         {/* Display hotelSearchParams details */}
-        <li>
-          <strong>Check-In Date:</strong> {checkInDate}
+        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+          <strong>Check-In Date:  </strong> {checkInDate}
         </li>
-        <li>
+        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
           <strong>Check-Out Date:</strong> {checkOutDate}
         </li>
-        <li>
+        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
           <strong>City:</strong> {city}
         </li>
-        <li>
+        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
           <strong>Number of Rooms:</strong> {numberOfRooms}
         </li>
-        <li>
+        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
           <strong>Number of Adults:</strong> {numberOfAdults}
         </li>
-        <li>
+        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
           <strong>Number of Children:</strong> {numberOfChildren}
         </li>
       </ul>
 
+
       {/* Display hotel data */}
-      {hotelData && (
+      {/* {hotelData && (
         <div>
           <h2 className="text-xl font-semibold mb-2">Available Hotels:</h2>
-          {/* Render hotel data here */}
-        </div>
-      )}
+         
+        </div> */}
+      {/* )} */}
     </div>
   );
 };

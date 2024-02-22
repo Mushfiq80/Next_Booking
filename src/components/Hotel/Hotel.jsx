@@ -2,6 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import HotelCard from '../ShowResult/HotelCard/HotelCard';
+
+import backgroundImage from '../../assets/bg-hotel.jpg';
+import './Hotel.css';
+
 import HotelView from '../HotelView/HotelView';
 
 
@@ -27,6 +31,7 @@ const Hotel = () => {
     const [hotelData, setHotelData] = useState(null);
     const [matchLocations, setMatchLocations] = useState([]);
     const [searchHotel, setSearchHotel] = useState([]); // New state for filtered hotels
+    const [hotelView, setHotelView] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -72,12 +77,19 @@ const Hotel = () => {
 
         // Implement the hotel search logic here
         console.log('Hotel search submitted:', formData);
+        setHotelView(true);
+
     };
 
     return (
-        <div>
-            <div className="container mx-auto my-8 p-8 bg-gray-100 shadow-lg rounded-lg">
-                <h1 className="text-3xl font-bold mb-4">Hotel Booking</h1>
+        <div style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            minHeight: '150vh', // Ensure full height of the viewport
+        }}>
+            <div className="flex flex-col container p-10 bg-blue-200 bg-opacity-40 shadow-lg rounded-lg">
+                <h1 className="mt-2 text-3xl font-bold mb-4">Hotel Booking</h1>
 
                 <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <label className="mb-2">
@@ -157,23 +169,25 @@ const Hotel = () => {
                         />
                     </label>
 
-                    <button
-                        type="button"
-                        onClick={handleSearchSubmit}
-                        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
-                    >
-                        Search
-                    </button>
+
                 </form>
+                <button
+                    type="button"
+                    onClick={handleSearchSubmit}
+                    className="mx-96 mt-5 bg-blue-500 text-white px-4 py-2 rounded-md hover:ring-4 hover:ring-blue-300 hover:shadow-lg transition-all"
+                >
+                    Search
+                </button>
             </div>
             <div>
                 <HotelCard hotelSearchParams={hotelSearchParams} hotelData={hotelData} />
             </div>
-            <div>
+            <div className='flex max-w-max mt-10 justify-center mx-auto gap-20'>
                 {/* Pass the filtered hotels to HotelView component */}
-                {searchHotel.map((hotel) => (
-                    <HotelView key={hotel._id} hotel={hotel} />
-                ))}
+                {hotelView &&
+                    searchHotel.map((hotel) => (
+                        <HotelView key={hotel._id} hotel={hotel} />
+                    ))}
             </div>
         </div>
     );

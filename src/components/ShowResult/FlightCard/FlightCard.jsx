@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { HiArrowLongRight } from "react-icons/hi2";
+import { MdFlightTakeoff, MdFlightLand } from "react-icons/md";
 
 const FlightCard = ({ flightSearchParams }) => {
-  const { journeyDate } = flightSearchParams;
+  const { journeyDate, departureAirport, arrivalAirport } = flightSearchParams;
   const [flightData, setFlightData] = useState(null);
 
   useEffect(() => {
@@ -23,25 +25,36 @@ const FlightCard = ({ flightSearchParams }) => {
 
   return (
     <div className="mt-8">
-      <h2 className="text-xl font-semibold mb-2">Flight Search Parameters:</h2>
-      <ul>
-        {/* Display flightSearchParams details */}
-        <li>
-          <strong>Journey Date:</strong> {journeyDate}
-        </li>
-      </ul>
-
+      <h2 className="text-2xl font-semibold mb-2">Searched Details</h2>
+    
       {/* Display selected date flights details or show a message if no flights are found */}
       {selectedDateFlights ? (
         <div>
           <h2 className="text-xl font-semibold mb-2">Flights on {journeyDate}:</h2>
+          <div>
+            <span><strong></strong></span>
+          </div>
+
+
+
+
+
           <ul>
             {selectedDateFlights.flightsInfo.map((flight, index) => (
-              <li key={index}>
-                <strong>Airline:</strong> {flight.airline},
-                <strong> Departure:</strong> {flight.departureTime},
-                <strong> Arrival:</strong> {flight.arrivalTime},
-                <strong> Price:</strong> ${flight.ticketPrice}
+              <li key={index} className='flex justify-between items-center bg-green-500 bg-opacity-45 mt-4 p-8 rounded font-bold '>
+                <p>Airline:<br />{flight.airline}</p> 
+                <div>
+                  <p>{flight.departureTime}</p>
+                  <p>{departureAirport}</p>
+                </div>
+                <MdFlightTakeoff className='text-5xl'/>
+                < HiArrowLongRight className='text-5xl'/>
+                <MdFlightLand className='text-5xl'/>
+                <div>
+                  <p>{flight.arrivalTime}</p>
+                  <p>{arrivalAirport}</p>
+                </div>
+                <p> USD$ {flight.ticketPrice}</p>
               </li>
             ))}
           </ul>

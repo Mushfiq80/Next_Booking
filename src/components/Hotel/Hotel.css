@@ -1,0 +1,31 @@
+.glow-button {
+    position: relative;
+    background-color: #7669ce;
+    color: #b1adca;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.glow-button:before {
+    content: '';
+    position: absolute;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffffff 20%, transparent 20%);
+    background-size: 150%;
+    transform: translate(-50%, -50%);
+    transition: all 0.8s;
+}
+
+.glow-button:hover:before {
+    width: 400px;
+    height: 400px;
+    background-size: 300%;
+    opacity: 0;
+}
