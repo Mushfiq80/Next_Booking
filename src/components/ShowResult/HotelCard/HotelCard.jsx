@@ -1,10 +1,15 @@
-// HotelCard.jsx
-
 import React, { useState, useEffect } from 'react';
 
 const HotelCard = ({ hotelSearchParams }) => {
   const { checkInDate, checkOutDate, city, numberOfRooms, numberOfAdults, numberOfChildren } = hotelSearchParams;
-  const [hotelData, setHotelData] = useState(null);
+
+  // Check if any of the search parameters is present
+  const hasSearchParams = checkInDate || checkOutDate || city || numberOfRooms || numberOfAdults || numberOfChildren;
+
+  if (!hasSearchParams) {
+    // If no search parameters are present, return null to hide the component
+    return null;
+  }
 
   // useEffect(() => {
   //   const fetchHotelData = async () => {
@@ -46,28 +51,27 @@ const HotelCard = ({ hotelSearchParams }) => {
   return (
     <div className="mt-8">
       <h2 className="text-3xl text-center font-semibold mb-2">Hotel Search Parameters</h2>
-      <ul className='flex justify-center space-x-4'>
+      <ul className='flex justify-center space-x-4 mt-8'>
         {/* Display hotelSearchParams details */}
-        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+        <li className="p-10 bg-purple-600 text-white font-light shadow-2xl rounded-lg">
           <strong>Check-In Date:  </strong> {checkInDate}
         </li>
-        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+        <li className="p-10 bg-purple-600 text-white font-light shadow-2xl rounded-lg">
           <strong>Check-Out Date:</strong> {checkOutDate}
         </li>
-        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+        <li className="p-10 bg-purple-600 text-white font-light shadow-2xl rounded-lg">
           <strong>City:</strong> {city}
         </li>
-        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+        <li className="p-10 bg-purple-600 text-white font-light shadow-2xl rounded-lg">
           <strong>Number of Rooms:</strong> {numberOfRooms}
         </li>
-        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+        <li className="p-10 bg-purple-600 text-white font-light shadow-2xl rounded-lg">
           <strong>Number of Adults:</strong> {numberOfAdults}
         </li>
-        <li className="p-10 bg-blue-100 shadow-2xl rounded-lg">
+        <li className="p-10 bg-purple-600 text-white font-light shadow-2xl rounded-lg">
           <strong>Number of Children:</strong> {numberOfChildren}
         </li>
       </ul>
-
 
       {/* Display hotel data */}
       {/* {hotelData && (

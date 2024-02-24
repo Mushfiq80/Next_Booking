@@ -1,17 +1,30 @@
 import React from 'react';
-import { Link, useLocation ,  } from 'react-router-dom';
+import { Link, useLocation, } from 'react-router-dom';
+import { RiHotelLine } from "react-icons/ri";
+import { MdFlight } from "react-icons/md";
+import clsx from 'clsx';
 
 const Header = () => {
     const location = useLocation();
     return (
-        <div className='sticky top-0 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 p-6'>
-            
-            <div className='flex gap-10 justify-center text-2xl font-semibold'>
+        <div className={clsx(
+            'sticky top-0 p-6',
+            {
+                'sticky bg-gradient-to-r from-lime-700 via-lime-500 to-white': location.pathname === '/flight',
+                'sticky bg-gradient-to-r from-purple-700 via-purple-500 to-white': location.pathname === '/hotel',
+                'hidden': location.pathname === '/',
+                
+            }
+        )}>
 
-            <Link to="/hotel" className={location.pathname === '/hotel' ? 'text-blue-400 text-3xl' : ''}>Hotel</Link>
-            <Link to="/flight" className={location.pathname === '/flight' ? 'text-blue-400 text-3xl' : ''}>Flight</Link>
-            </div>
-        </div>
+       
+            < div className='flex gap-10 justify-center text-2xl font-semibold' >
+
+                <Link to="/hotel" className={location.pathname === '/hotel' ? 'text-white text-3xl flex items-center' : 'flex items-center text-slate-300'}><RiHotelLine /> Hotel </Link>
+
+                <Link to="/flight" className={location.pathname === '/flight' ? 'text-white text-3xl flex items-center' : 'flex items-center text-slate-300'}>Flight <MdFlight /></Link>
+            </div >
+        </div >
     );
 };
 

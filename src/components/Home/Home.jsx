@@ -1,25 +1,49 @@
-// Home.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import hotelImage from '../../assets/home-hotel.jpg';  // Replace with the path to your hotel image
+import flightImage from '../../assets/home-flight.jpg';  // Replace with the path to your flight image
+import './Home.css';  // Import the CSS file
 
 const Home = () => {
-  return (
-    <div className="container mx-auto my-8 p-8 bg-gray-100 flex justify-around">
-      <Link to="/hotel">
-        <div className="bg-white p-8 rounded-md shadow-md flex-1 cursor-pointer">
-          <h2 className="text-2xl font-semibold mb-4">Hotel Booking</h2>
-          <p className="text-gray-700">Book your stay with us!</p>
-        </div>
-      </Link>
+  const cardStyle = {
+    backgroundImage: `url(${hotelImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
 
-      <Link to="/flight">
-        <div className="bg-white p-8 rounded-md shadow-md flex-1 cursor-pointer">
-          <h2 className="text-2xl font-semibold mb-4">Flight Booking</h2>
-          <p className="text-gray-700">Fly high with great deals!</p>
-        </div>
-      </Link>
+  const cardLargeStyle = {
+    backgroundImage: `url(${flightImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
+  return (
+    <div className="bg-black h-screen ">
+      <div className="text-white text-center py-14">
+        <h1 className="text-6xl font-bold text-purple-500">Welcome to <span className='text-rose-600'>NEXT</span> Booking</h1>
+        <p className="text-xl mt-4">Assessment for Front End Developers</p>
+      </div>
+      <div className='flex justify-around items-center'>
+        <Link to="/hotel">
+          <div className="card" style={cardStyle}>
+            <div className="overlay"></div>
+            <div className='mt-96 trans-text text-purple-400 relative'>
+              <h2 className="text-4xl font-semibold ">Hotel Booking</h2>
+              <p className="">Book your stay with us!</p>
+            </div>
+          </div>
+        </Link>
+
+        <Link to="/flight">
+          <div className="card-large" style={cardLargeStyle}>
+            <div className="overlay"></div>
+            <div className='mt-96 trans-text text-lime-400 relative'>
+              <h2 className="text-4xl font-semibold">Flight Booking</h2>
+              <p className="">Fly high with great deals!</p>
+            </div>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

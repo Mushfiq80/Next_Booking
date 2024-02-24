@@ -1,0 +1,38 @@
+.card,
+.card-large {
+  position: relative;
+  height: 500px; /* Keep the desired height */
+  width: 400px; /* Keep the desired width */
+  padding: 28px;
+  margin: 20px;
+  border-radius: 8px;
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+.card:hover,
+.card-large:hover {
+  transform: translateY(10px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.45;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .overlay,
+.card-large:hover .overlay {
+  opacity: 0;
+}
+
+.trans-text {
+  transition: transform 1s ease;
+}
+
+.card:hover .trans-text,
+.card-large:hover .trans-text {
+  transform: translateY(100px);
+}

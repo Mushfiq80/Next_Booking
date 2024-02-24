@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FlightCard from '../ShowResult/FlightCard/FlightCard';
 import FlightBg from '../../assets/bg-flight.jpg'
+import './Flight.css';
 
 const Flight = () => {
   const [formData, setFormData] = useState({
@@ -48,18 +49,23 @@ const Flight = () => {
   };
 
   return (
-    <div
+    <div className="your-content pt-6"
       style={{
         backgroundImage: `url(${FlightBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         minHeight: '150vh',
+        position: 'relative',
       }}
     >
-      <div className="flex flex-col container mx-auto p-8 shadow-lg rounded-lg ">
-        <h1 className="text-3xl font-bold mb-4">Flight Booking</h1>
+      <div className="overlay absolute inset-0 bg-black opacity-30"></div>
+      <div className="flex flex-col container mx-auto p-8 shadow-lg rounded-lg relative z-10">
+        <h1 className="text-3xl font-bold mb-4 text-white">Flight Booking</h1>
 
-        <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white"> */}
+
+
+        <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative input-text-bl ">
           <label className="mb-2">
             Departure Airport:
             <input
@@ -67,7 +73,7 @@ const Flight = () => {
               name="departureAirport"
               value={formData.departureAirport}
               onChange={handleInputChange}
-              className="block w-full p-2 border rounded-md"
+              className="block w-full p-2 border text-black rounded-md"
               placeholder="Enter departure airport"
             />
           </label>
@@ -79,7 +85,7 @@ const Flight = () => {
               name="arrivalAirport"
               value={formData.arrivalAirport}
               onChange={handleInputChange}
-              className="block w-full p-2 border rounded-md"
+              className="block w-full p-2 border text-black rounded-md"
               placeholder="Enter arrival airport"
             />
           </label>
@@ -91,7 +97,7 @@ const Flight = () => {
               name="journeyDate"
               value={formData.journeyDate}
               onChange={handleInputChange}
-              className="block w-full p-2 border rounded-md"
+              className="block w-full p-2 border text-black rounded-md"
               placeholder="Select journey date"
             />
           </label>
@@ -103,7 +109,7 @@ const Flight = () => {
               name="returnDate"
               value={formData.returnDate}
               onChange={handleInputChange}
-              className="block w-full p-2 border rounded-md"
+              className="block w-full p-2 border text-black rounded-md"
               placeholder="Select return date"
             />
           </label>
@@ -115,7 +121,7 @@ const Flight = () => {
               name="traveler"
               value={formData.traveler}
               onChange={handleInputChange}
-              className="block w-full p-2 border rounded-md"
+              className="block w-full p-2 border text-black rounded-md"
               placeholder="Enter number of travelers"
             />
           </label>
@@ -126,7 +132,7 @@ const Flight = () => {
               name="flightClass"
               value={formData.flightClass}
               onChange={handleInputChange}
-              className="block w-full p-2 border rounded-md"
+              className="block w-full p-2 border text-black rounded-md"
             >
               <option value="">Select class</option>
               <option value="Economy">Economy</option>
@@ -139,17 +145,19 @@ const Flight = () => {
         <button
           type="button"
           onClick={handleSearchSubmit}
-          className="mx-96 mt-4 bg-gradient-to-r from-green-400 to-yellow-400 text-black px-4 py-2 rounded-md hover:from-yellow-400 hover:to-green-500 "
+          className="w-96 mx-auto mt-4 bg-gradient-to-r from-green-400 to-yellow-400 text-black px-4 py-2 rounded-md hover:from-yellow-400 hover:to-green-500 "
         >
           Flight Search
         </button>
-        <div>
-          <FlightCard flightSearchParams={flightSearchParams} />
+        <div className="mt-8 relative">
+          {/* Show FlightCard only when flightSearchParams is not null */}
+          {flightSearchParams && (
+            <FlightCard flightSearchParams={flightSearchParams} />
+          )}
         </div>
-        {/* Pass flightSearchParams to FlightCard component */}
-
       </div>
     </div>
+
   );
 };
 

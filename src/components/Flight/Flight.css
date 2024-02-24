@@ -1,0 +1,14 @@
+.your-container {
+    position: relative;
+}
+
+.your-content {
+    /* Your existing styles for the content */
+    color: white;
+    /* ... */
+}
+
+/* form label{
+    color: black;
+
+} */

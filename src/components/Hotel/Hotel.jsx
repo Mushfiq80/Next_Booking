@@ -1,12 +1,8 @@
-// Hotel.jsx
-
 import React, { useEffect, useState } from 'react';
 import HotelCard from '../ShowResult/HotelCard/HotelCard';
-
-import backgroundImage from '../../assets/bg-hotel.jpg';
 import './Hotel.css';
-
 import HotelView from '../HotelView/HotelView';
+import backgroundImage from '../../assets/bg-hotel.jpg';
 
 
 const Hotel = () => {
@@ -82,13 +78,14 @@ const Hotel = () => {
     };
 
     return (
-        <div style={{
+        <div className='relative pt-6' style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            minHeight: '150vh', // Ensure full height of the viewport
+            minHeight: '100vh', // Ensure full height of the viewport
         }}>
-            <div className="flex flex-col container p-10 bg-blue-200 bg-opacity-40 shadow-lg rounded-lg">
+            <div className="overlay absolute inset-0 bg-black opacity-30"></div>
+            <div className="flex flex-col container p-10 bg-purple-500 bg-opacity-85 relative shadow-lg text-white rounded-lg">
                 <h1 className="mt-2 text-3xl font-bold mb-4">Hotel Booking</h1>
 
                 <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -99,7 +96,7 @@ const Hotel = () => {
                             name="checkInDate"
                             value={formData.checkInDate}
                             onChange={handleInputChange}
-                            className="block w-full p-2 border rounded-md"
+                            className="block w-full p-2 border rounded-md text-gray-400"
                             placeholder="Select date"
                         />
                     </label>
@@ -111,7 +108,7 @@ const Hotel = () => {
                             name="checkOutDate"
                             value={formData.checkOutDate}
                             onChange={handleInputChange}
-                            className="block w-full p-2 border rounded-md"
+                            className="block w-full p-2 border text-gray-400 rounded-md"
                             placeholder="Select date"
                         />
                     </label>
@@ -122,7 +119,7 @@ const Hotel = () => {
                             name="city"
                             value={formData.city}
                             onChange={handleInputChange}
-                            className="block w-full p-2 border rounded-md"
+                            className="block w-full p-2 border text-gray-400 rounded-md"
                         >
                             <option value="">Select city</option>
                             {matchLocations.map((location, index) => (
@@ -140,7 +137,7 @@ const Hotel = () => {
                             name="numberOfRooms"
                             value={formData.numberOfRooms}
                             onChange={handleInputChange}
-                            className="block w-full p-2 border rounded-md"
+                            className="block w-full p-2 border text-gray-400 rounded-md"
                             placeholder="Enter number of rooms"
                         />
                     </label>
@@ -152,7 +149,7 @@ const Hotel = () => {
                             name="numberOfAdults"
                             value={formData.numberOfAdults}
                             onChange={handleInputChange}
-                            className="block w-full p-2 border rounded-md"
+                            className="block w-full p-2 border text-gray-400 rounded-md"
                             placeholder="Enter number of adults"
                         />
                     </label>
@@ -164,7 +161,7 @@ const Hotel = () => {
                             name="numberOfChildren"
                             value={formData.numberOfChildren}
                             onChange={handleInputChange}
-                            className="block w-full p-2 border rounded-md"
+                            className="block w-full p-2 border text-gray-400 rounded-md"
                             placeholder="Enter number of children"
                         />
                     </label>
@@ -174,15 +171,36 @@ const Hotel = () => {
                 <button
                     type="button"
                     onClick={handleSearchSubmit}
-                    className="mx-96 mt-5 bg-blue-500 text-white px-4 py-2 rounded-md hover:ring-4 hover:ring-blue-300 hover:shadow-lg transition-all"
+                    className="w-96 mx-auto mt-5 px-4 py-2 bg-purple-700 bg-opacity-85 text-white  rounded-md hover:ring-4 hover:ring-purple-400 hover:shadow-lg transition-all"
                 >
                     Search
                 </button>
+
             </div>
-            <div>
+            <div className='flex justify-center'>
+                
+                {/* <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white 
+                
+                <button
+                    type="button"
+                    onClick={handleSearchSubmit}
+                    className="flex mt-5 px-4 py-2 bg-blue-500 bg-opacity-85 text-white  rounded-md hover:ring-4 hover:ring-red-200 hover:shadow-lg transition-all"
+                >
+                    Search
+                </button>
+                
+                
+                
+                dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        Purple to pink////////////////////////
+                    </span>
+                </button> */}
+            </div>
+            <div className='relative'> 
                 <HotelCard hotelSearchParams={hotelSearchParams} hotelData={hotelData} />
             </div>
-            <div className='flex max-w-max mt-10 justify-center mx-auto gap-20'>
+            <div className='flex max-w-max mt-10 justify-center mx-auto relative gap-20'>
                 {/* Pass the filtered hotels to HotelView component */}
                 {hotelView &&
                     searchHotel.map((hotel) => (
