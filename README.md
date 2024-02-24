@@ -4,27 +4,26 @@ Welcome to the Next Booking project! This project is designed as part of the sel
 
 ## Overview
 
-Next Booking is a web application that allows users to book hotels and flights. It's a simple yet powerful tool that showcases your skills in front-end development.
+Next Booking is a web application that allows users to book hotels and flights. It's a simple yet powerful tool that showcases my skills in front-end development.
 
 ## Screenshots
 
 ![Screenshot 1](./src/assets/ss1.png)
-*Caption for Screenshot 1.*
+*Home page*
 
 ![Screenshot 2](./src/assets/ss2.png)
-*Caption for Screenshot 2.*
+*Hotel Booking Part*
 ![Screenshot 2](./src/assets/ss3.png)
-*Caption for Screenshot 3.*
+*Flight Booking Part*
 
-<!-- Add more screenshots as needed -->
 
 ## User View
 
-<!-- Describe the user view and features of your application -->
+<!-- Describe the user view and features of my application -->
 
 ## Getting Started
 
-Follow the steps below to get the project up and running on your local machine.
+Follow the steps below to get the project up and running on my local machine.
 
 ### Prerequisites
 
@@ -34,32 +33,25 @@ Follow the steps below to get the project up and running on your local machine.
 
 ```bash
 git clone https://github.com/Mushfiq80/Next_Booking.git
+
 Navigate to the Project Directory
-bash
-Copy code
-cd Next_Booking
-Install Dependencies
-bash
-Copy code
-npm install
-Run the Application
-bash
-Copy code
-npm run dev
-Visit http://localhost:3000 in your web browser to view the application.
+$cd Next_Booking
+
+Install Dependencies if needed
+$npm install
+
+$npm run dev
+Visit http://localhost:3000 or default location in my web browser to view the application.
 
 Technologies Used
 React
 Tailwind CSS
+Vanilla CSS
 Other technologies...
-Contributing
-If you'd like to contribute to this project, please follow these steps:
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes.
-Commit your changes and push to your forked repository.
-Open a pull request.
-License
-This project is licensed under the MIT License.
+Developed By,
+Mohammad Mushfiq Us Saleheen
+aurpon10@gmail.com
+
+
 
