@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <div className='relative'>
+        <div className=''>
             <Header></Header>
             <Outlet></Outlet>
         </div>

@@ -5,7 +5,7 @@ const HotelView = ({ hotel }) => {
   const { _id, hotel_pic, h_name, rating, location, price, size_for } = hotel;
 
   return (
-    <div className="max-w-md rounded overflow-hidden shadow-lg mx-2 mb-4 bg-blue-200 bg-opacity-85 p-4">
+    <div className="max-w-md rounded overflow-hidden shadow-lg mx-2 mb-4 bg-purple-300 bg-opacity-85 p-4">
       <img className="w-full h-48 object-cover" src={hotel_pic} alt={h_name} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{h_name}</div>
