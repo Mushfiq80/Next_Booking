@@ -8,11 +8,13 @@ Next Booking is a web application that allows users to book hotels and flights. 
 
 ## Screenshots
 
-![Screenshot 1](/path/to/screenshot1.png)
+![Screenshot 1](./src/assets/ss1.png)
 *Caption for Screenshot 1.*
 
-![Screenshot 2](/path/to/screenshot2.png)
+![Screenshot 2](./src/assets/ss2.png)
 *Caption for Screenshot 2.*
+![Screenshot 2](./src/assets/ss3.png)
+*Caption for Screenshot 3.*
 
 <!-- Add more screenshots as needed -->
 
